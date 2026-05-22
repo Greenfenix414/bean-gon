@@ -3355,7 +3355,10 @@ const m = {
 
                 ctx.beginPath();
                 ctx.arc(0, 0, 30, 0, 2 * Math.PI);
-                ctx.fillStyle = m.bodyGradient
+                let catGrd = ctx.createLinearGradient(-30, 0, 30, 0);
+                catGrd.addColorStop(0, `hsl(112 73.2% 59%)`);
+                catGrd.addColorStop(1, `hsl(132, 81%, 45%)`);
+                ctx.fillStyle = catGrd
                 ctx.fill();
                 ctx.stroke();
                 ctx.moveTo(19, 0);
